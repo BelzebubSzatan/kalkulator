@@ -10,7 +10,7 @@
                HeightRequest="600"
                CornerRadius="10"
                Margin="10">
-            <Grid>
+            <Grid x:Name="Content">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -36,10 +36,9 @@
                             Padding="20"
                             >
                     <Label x:Name="UpperText"
-                           Text="12 + 2="
                            FontSize="20" />
-                    <Label x:Name="Result"
-                           Text="14"
+                    <Label x:Name="ResultText"
+                           
                            FontSize="20" />
                 </FlexLayout>
 
@@ -47,22 +46,27 @@
                         Grid.Row="2"
                         Grid.Column="0"
                         Text="X^2"
-                        BackgroundColor="LightBlue" />
+                        BackgroundColor="LightBlue"
+                        ClassId="pow"
+                        />
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="1"
                         Text="SQRT"
-                        BackgroundColor="LightBlue" />
+                        BackgroundColor="LightBlue" 
+                        ClassId="sqrt"/>
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="2"
                         Text="C"
-                        BackgroundColor="LightBlue" />
+                        BackgroundColor="LightBlue" 
+                        ClassId="clear"/>
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="3"
                         Text="/"
-                        BackgroundColor="LightBlue" />
+                        BackgroundColor="LightBlue" 
+                        ClassId="/"/>
 
                 <Button CornerRadius="10"
                         Grid.Row="3"
@@ -80,7 +84,8 @@
                         Grid.Row="3"
                         Grid.Column="3"
                         Text="X"
-                        BackgroundColor="LightBlue" />
+                        BackgroundColor="LightBlue" 
+                        ClassId="x"/>
 
                 <Button CornerRadius="10"
                         Grid.Row="4"
@@ -98,7 +103,8 @@
                         Grid.Row="4"
                         Grid.Column="3"
                         Text="-"
-                        BackgroundColor="LightBlue" />
+                        BackgroundColor="LightBlue" 
+                        ClassId="-"/>
 
                 <Button CornerRadius="10"
                         Grid.Row="5"
@@ -116,7 +122,8 @@
                         Grid.Row="5"
                         Grid.Column="3"
                         Text="+"
-                        BackgroundColor="LightBlue" />
+                        BackgroundColor="LightBlue" 
+                        ClassId="+"/>
 
                 <Button CornerRadius="10"
                         Grid.Row="6"
@@ -134,7 +141,8 @@
                         Grid.Row="6"
                         Grid.Column="3"
                         Text="="
-                        BackgroundColor="LightGreen" />
+                        BackgroundColor="LightGreen" 
+                        ClassId="="/>
             </Grid>
         </Frame>
     </StackLayout>
