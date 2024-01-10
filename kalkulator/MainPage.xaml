@@ -27,46 +27,45 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <FlexLayout Grid.Row="0"
-                            Grid.RowSpan="2"
-                            BackgroundColor="Gray"
-                            Grid.ColumnSpan="4"
-                            Direction="Column"
-                            AlignItems="End"
-                            Padding="20"
-                            >
-                    <Label x:Name="UpperText"
-                           FontSize="20" />
-                    <Label x:Name="ResultText"
-                           
-                           FontSize="20" />
-                </FlexLayout>
+                <Frame Grid.Row="0"
+                       Grid.RowSpan="2"
+                       BackgroundColor="White"
+                       Grid.ColumnSpan="4"
+                       Padding="20"
+                       CornerRadius="20">
+                    <FlexLayout Direction="Column"
+                                AlignItems="End">
+                        <Label x:Name="UpperText"
+                               FontSize="20" />
+                        <Label x:Name="ResultText"
+                               FontSize="20" />
+                    </FlexLayout>
+                </Frame>
 
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="0"
-                        Text="X^2"
+                        Text="X^N"
                         BackgroundColor="LightBlue"
-                        ClassId="pow"
-                        />
+                        ClassId="^" />
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="1"
-                        Text="SQRT"
-                        BackgroundColor="LightBlue" 
-                        ClassId="sqrt"/>
+                        Text="sqrt"
+                        BackgroundColor="LightBlue"
+                        ClassId="s" />
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="2"
                         Text="C"
-                        BackgroundColor="LightBlue" 
-                        ClassId="clear"/>
+                        BackgroundColor="LightBlue"
+                        ClassId="c" />
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="3"
                         Text="/"
-                        BackgroundColor="LightBlue" 
-                        ClassId="/"/>
+                        BackgroundColor="LightBlue"
+                        ClassId="/" />
 
                 <Button CornerRadius="10"
                         Grid.Row="3"
@@ -84,8 +83,8 @@
                         Grid.Row="3"
                         Grid.Column="3"
                         Text="X"
-                        BackgroundColor="LightBlue" 
-                        ClassId="x"/>
+                        BackgroundColor="LightBlue"
+                        ClassId="x" />
 
                 <Button CornerRadius="10"
                         Grid.Row="4"
@@ -103,8 +102,8 @@
                         Grid.Row="4"
                         Grid.Column="3"
                         Text="-"
-                        BackgroundColor="LightBlue" 
-                        ClassId="-"/>
+                        BackgroundColor="LightBlue"
+                        ClassId="-" />
 
                 <Button CornerRadius="10"
                         Grid.Row="5"
@@ -122,13 +121,14 @@
                         Grid.Row="5"
                         Grid.Column="3"
                         Text="+"
-                        BackgroundColor="LightBlue" 
-                        ClassId="+"/>
+                        BackgroundColor="LightBlue"
+                        ClassId="+" />
 
                 <Button CornerRadius="10"
                         Grid.Row="6"
                         Grid.Column="0"
-                        Text="1/x" />
+                        Text="1/x"
+                        ClassId="1/x" />
                 <Button CornerRadius="10"
                         Grid.Row="6"
                         Grid.Column="1"
@@ -136,13 +136,14 @@
                 <Button CornerRadius="10"
                         Grid.Row="6"
                         Grid.Column="2"
-                        Text="," />
+                        Text=","
+                        ClassId="," />
                 <Button CornerRadius="10"
                         Grid.Row="6"
                         Grid.Column="3"
                         Text="="
-                        BackgroundColor="LightGreen" 
-                        ClassId="="/>
+                        BackgroundColor="Green"
+                        ClassId="=" />
             </Grid>
         </Frame>
     </StackLayout>
