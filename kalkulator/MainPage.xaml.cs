@@ -13,6 +13,7 @@ namespace kalkulator
         string x = "", y = "";
         bool next = false;
         char? action;
+        double? result;
         public MainPage()
         {
             InitializeComponent();
@@ -29,25 +30,47 @@ namespace kalkulator
             bool isaction = false;
             if ((sender as Button).ClassId != null)
             {
+                if ((sender as Button).ClassId == "-" && x == "")
+                    x = "0";
+
+
                 isaction = true;
                 next = true;
-                if ((sender as Button).ClassId.Length == 1&&(sender as Button).ClassId!="=")
+                if ((sender as Button).ClassId.Length == 1&&(sender as Button).ClassId != "="&&x!="")
+                {
                     action = char.Parse((sender as Button).ClassId);
+                }
                 else
                 {
                     switch (action)
                     {
                         case '+':
-                            ResultText.Text = (double.Parse(x) + double.Parse(y)).ToString();
+                            result = (double.Parse(x) + double.Parse(y));
+                            ResultText.Text = result.ToString();
                             break;
                         case '-':
-                            ResultText.Text = (double.Parse(x) - double.Parse(y)).ToString();
+                            result = (double.Parse(x) - double.Parse(y));
+                            ResultText.Text = result.ToString();
                             break;
                         case '/':
-                            ResultText.Text = (double.Parse(x) / double.Parse(y)).ToString();
+                            result = (double.Parse(x) / double.Parse(y));
+                            ResultText.Text = result.ToString();
                             break;
                         case 'x':
-                            ResultText.Text = (double.Parse(x) * double.Parse(y)).ToString();
+                            result = (double.Parse(x) * double.Parse(y));
+                            ResultText.Text = result.ToString();
+                            break;
+                        case 'p':
+                            result = Math.Pow(double.Parse(x) , double.Parse(y));
+                            ResultText.Text = result.ToString();
+                            break;
+                        case 'c':
+                            x = y = "";
+                            action = null;
+                            UpperText.Text = "";
+                            next = false;
+                            UpperText.Text = "";
+                            ResultText.Text = "";
                             break;
                     }
 

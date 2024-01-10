@@ -47,12 +47,12 @@
                         Grid.Column="0"
                         Text="X^2"
                         BackgroundColor="LightBlue"
-                        ClassId="pow"
+                        ClassId="p"
                         />
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="1"
-                        Text="SQRT"
+                        Text="s"
                         BackgroundColor="LightBlue" 
                         ClassId="sqrt"/>
                 <Button CornerRadius="10"
@@ -60,7 +60,7 @@
                         Grid.Column="2"
                         Text="C"
                         BackgroundColor="LightBlue" 
-                        ClassId="clear"/>
+                        ClassId="c"/>
                 <Button CornerRadius="10"
                         Grid.Row="2"
                         Grid.Column="3"
